@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Task List</title>
     </head>
-    <body>   
-        <h2><li>{{ object }}</li></h2>
+    <body>
         <form method="POST">
             {% csrf_token %}
             {{ form.as_div }}
             <button type="submit">Submit</button>
         </form>
     </body>
-</html>
