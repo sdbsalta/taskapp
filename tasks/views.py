@@ -64,6 +64,7 @@ class TaskCreateView(CreateView):
     form_class = TaskForm
     template_name = "task_create.html"
     
+    # leads url to the list
     def get_success_url(self):
         return reverse_lazy("tasks:list")
     

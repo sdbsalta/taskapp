@@ -4,7 +4,7 @@
         <title>Task List</title>
     </head>
     <body>   
-        <h2><li>{{ object }}</li></h2>
+        <h2>{{ object }}</h2>
         <form method="POST">
             {% csrf_token %}
             {{ form.as_div }}
