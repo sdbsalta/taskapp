@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Task List</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}Task List{% endblock %}
+{% block styles %}{% endblock %}
+{% block main %}
     {% if request.user.is_authenticated %}
         <h1>Hello {{ request.user.username }}</h1>
         <form action="{% url 'logout' %}" method="POST">
@@ -28,5 +26,5 @@
         {{ form.as_div }}
         <button type="submit">Submit</button>
     </form>
-</body>
-</html>
+{% endblock %}
+{% block scripts %}{% endblock %}

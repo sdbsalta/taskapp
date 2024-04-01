@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block page_title %}{% endblock %}</title>
+        <link rel ="stylesheet" href ="{% static 'css/main.css' %}">
+        {% block styles %}{% endblock %}
+        <div class = "bio">
+            <marquee border-style="dotted" class="shadow" scrollamount="15">
+                <h1>░M░Y░ ░P░U░S░S░Y░ ░I░N░ ░B░I░O░</h1>
+            </marquee>
+        </div>
+        <style>
+            .bio {
+                width: 30%;
+                background-color: pink;
+                border-style: outset;
+            }
+            .shadow {
+                text-shadow: 2px 2px gray;
+            }
+        </style>
+    </head>
+    <body>
+        {% block main %}{% endblock %}
+        {% block scripts %}{% endblock %}
+    </body>
+</html>
