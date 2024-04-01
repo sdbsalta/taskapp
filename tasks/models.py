@@ -14,6 +14,7 @@ class Task(models.Model):
         on_delete=models.CASCADE,
         related_name='tasks'
         )
+    task_image = models.ImageField(upload_to="images/", null=True)
     
     def __str__(self):
         return '{} due on {}'.format(self.name, self.due_date)
